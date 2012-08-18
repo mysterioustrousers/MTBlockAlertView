@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F1D4B0A15DF3DEC0003DE79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D4B0915DF3DEC0003DE79 /* Foundation.framework */; };
+		5F1D4B0F15DF3DEC0003DE79 /* MTBlockAlertView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F1D4B0E15DF3DEC0003DE79 /* MTBlockAlertView.h */; };
+		5F1D4B1115DF3DEC0003DE79 /* MTBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D4B1015DF3DEC0003DE79 /* MTBlockAlertView.m */; };
+		5F1D4B1815DF3E170003DE79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D4B1715DF3E170003DE79 /* UIKit.framework */; };
+		5F1D4B1F15DF44400003DE79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D4B1715DF3E170003DE79 /* UIKit.framework */; };
+		5F1D4B2015DF44400003DE79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D4B0915DF3DEC0003DE79 /* Foundation.framework */; };
+		5F1D4B2215DF44400003DE79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D4B2115DF44400003DE79 /* CoreGraphics.framework */; };
+		5F1D4B2815DF44400003DE79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F1D4B2615DF44400003DE79 /* InfoPlist.strings */; };
+		5F1D4B2A15DF44400003DE79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D4B2915DF44400003DE79 /* main.m */; };
+		5F1D4B2E15DF44400003DE79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D4B2D15DF44400003DE79 /* AppDelegate.m */; };
+		5F1D4B3115DF44400003DE79 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1D4B2F15DF44400003DE79 /* MainStoryboard_iPhone.storyboard */; };
+		5F1D4B3415DF44400003DE79 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1D4B3215DF44400003DE79 /* MainStoryboard_iPad.storyboard */; };
+		5F1D4B3715DF44400003DE79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D4B3615DF44400003DE79 /* ViewController.m */; };
+		5F1D4B3D15DF44500003DE79 /* libMTBlockAlertView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D4B0615DF3DEC0003DE79 /* libMTBlockAlertView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F1D4B3B15DF44470003DE79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1D4AFD15DF3DEC0003DE79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F1D4B0515DF3DEC0003DE79;
+			remoteInfo = MTBlockAlertView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F1D4B0415DF3DEC0003DE79 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				5F1D4B0F15DF3DEC0003DE79 /* MTBlockAlertView.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5F1D4B0615DF3DEC0003DE79 /* libMTBlockAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMTBlockAlertView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1D4B0915DF3DEC0003DE79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F1D4B0D15DF3DEC0003DE79 /* MTBlockAlertView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTBlockAlertView-Prefix.pch"; sourceTree = "<group>"; };
+		5F1D4B0E15DF3DEC0003DE79 /* MTBlockAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBlockAlertView.h; sourceTree = "<group>"; };
+		5F1D4B1015DF3DEC0003DE79 /* MTBlockAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBlockAlertView.m; sourceTree = "<group>"; };
+		5F1D4B1715DF3E170003DE79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5F1D4B1D15DF44400003DE79 /* MTBlockAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTBlockAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1D4B2115DF44400003DE79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5F1D4B2515DF44400003DE79 /* MTBlockAlertViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTBlockAlertViewDemo-Info.plist"; sourceTree = "<group>"; };
+		5F1D4B2715DF44400003DE79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F1D4B2915DF44400003DE79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F1D4B2B15DF44400003DE79 /* MTBlockAlertViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTBlockAlertViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		5F1D4B2C15DF44400003DE79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F1D4B2D15DF44400003DE79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F1D4B3015DF44400003DE79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5F1D4B3315DF44400003DE79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		5F1D4B3515DF44400003DE79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5F1D4B3615DF44400003DE79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F1D4B0315DF3DEC0003DE79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1D4B1815DF3E170003DE79 /* UIKit.framework in Frameworks */,
+				5F1D4B0A15DF3DEC0003DE79 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1D4B1A15DF44400003DE79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1D4B3D15DF44500003DE79 /* libMTBlockAlertView.a in Frameworks */,
+				5F1D4B1F15DF44400003DE79 /* UIKit.framework in Frameworks */,
+				5F1D4B2015DF44400003DE79 /* Foundation.framework in Frameworks */,
+				5F1D4B2215DF44400003DE79 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F1D4AFB15DF3DEC0003DE79 = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B0B15DF3DEC0003DE79 /* MTBlockAlertView */,
+				5F1D4B2315DF44400003DE79 /* MTBlockAlertViewDemo */,
+				5F1D4B0815DF3DEC0003DE79 /* Frameworks */,
+				5F1D4B0715DF3DEC0003DE79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F1D4B0715DF3DEC0003DE79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B0615DF3DEC0003DE79 /* libMTBlockAlertView.a */,
+				5F1D4B1D15DF44400003DE79 /* MTBlockAlertViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F1D4B0815DF3DEC0003DE79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B1715DF3E170003DE79 /* UIKit.framework */,
+				5F1D4B0915DF3DEC0003DE79 /* Foundation.framework */,
+				5F1D4B2115DF44400003DE79 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F1D4B0B15DF3DEC0003DE79 /* MTBlockAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B0E15DF3DEC0003DE79 /* MTBlockAlertView.h */,
+				5F1D4B1015DF3DEC0003DE79 /* MTBlockAlertView.m */,
+				5F1D4B0C15DF3DEC0003DE79 /* Supporting Files */,
+			);
+			path = MTBlockAlertView;
+			sourceTree = "<group>";
+		};
+		5F1D4B0C15DF3DEC0003DE79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B0D15DF3DEC0003DE79 /* MTBlockAlertView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F1D4B2315DF44400003DE79 /* MTBlockAlertViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B2C15DF44400003DE79 /* AppDelegate.h */,
+				5F1D4B2D15DF44400003DE79 /* AppDelegate.m */,
+				5F1D4B2F15DF44400003DE79 /* MainStoryboard_iPhone.storyboard */,
+				5F1D4B3215DF44400003DE79 /* MainStoryboard_iPad.storyboard */,
+				5F1D4B3515DF44400003DE79 /* ViewController.h */,
+				5F1D4B3615DF44400003DE79 /* ViewController.m */,
+				5F1D4B2415DF44400003DE79 /* Supporting Files */,
+			);
+			path = MTBlockAlertViewDemo;
+			sourceTree = "<group>";
+		};
+		5F1D4B2415DF44400003DE79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F1D4B2515DF44400003DE79 /* MTBlockAlertViewDemo-Info.plist */,
+				5F1D4B2615DF44400003DE79 /* InfoPlist.strings */,
+				5F1D4B2915DF44400003DE79 /* main.m */,
+				5F1D4B2B15DF44400003DE79 /* MTBlockAlertViewDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F1D4B0515DF3DEC0003DE79 /* MTBlockAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1D4B1415DF3DEC0003DE79 /* Build configuration list for PBXNativeTarget "MTBlockAlertView" */;
+			buildPhases = (
+				5F1D4B0215DF3DEC0003DE79 /* Sources */,
+				5F1D4B0315DF3DEC0003DE79 /* Frameworks */,
+				5F1D4B0415DF3DEC0003DE79 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTBlockAlertView;
+			productName = MTBlockAlertView;
+			productReference = 5F1D4B0615DF3DEC0003DE79 /* libMTBlockAlertView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5F1D4B1C15DF44400003DE79 /* MTBlockAlertViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1D4B3815DF44400003DE79 /* Build configuration list for PBXNativeTarget "MTBlockAlertViewDemo" */;
+			buildPhases = (
+				5F1D4B1915DF44400003DE79 /* Sources */,
+				5F1D4B1A15DF44400003DE79 /* Frameworks */,
+				5F1D4B1B15DF44400003DE79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1D4B3C15DF44470003DE79 /* PBXTargetDependency */,
+			);
+			name = MTBlockAlertViewDemo;
+			productName = MTBlockAlertViewDemo;
+			productReference = 5F1D4B1D15DF44400003DE79 /* MTBlockAlertViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F1D4AFD15DF3DEC0003DE79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Mysterious Trousers";
+			};
+			buildConfigurationList = 5F1D4B0015DF3DEC0003DE79 /* Build configuration list for PBXProject "MTBlockAlertView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F1D4AFB15DF3DEC0003DE79;
+			productRefGroup = 5F1D4B0715DF3DEC0003DE79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F1D4B0515DF3DEC0003DE79 /* MTBlockAlertView */,
+				5F1D4B1C15DF44400003DE79 /* MTBlockAlertViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F1D4B1B15DF44400003DE79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1D4B2815DF44400003DE79 /* InfoPlist.strings in Resources */,
+				5F1D4B3115DF44400003DE79 /* MainStoryboard_iPhone.storyboard in Resources */,
+				5F1D4B3415DF44400003DE79 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1D4B0215DF3DEC0003DE79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1D4B1115DF3DEC0003DE79 /* MTBlockAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1D4B1915DF44400003DE79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1D4B2A15DF44400003DE79 /* main.m in Sources */,
+				5F1D4B2E15DF44400003DE79 /* AppDelegate.m in Sources */,
+				5F1D4B3715DF44400003DE79 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1D4B3C15DF44470003DE79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F1D4B0515DF3DEC0003DE79 /* MTBlockAlertView */;
+			targetProxy = 5F1D4B3B15DF44470003DE79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F1D4B2615DF44400003DE79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1D4B2715DF44400003DE79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5F1D4B2F15DF44400003DE79 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1D4B3015DF44400003DE79 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5F1D4B3215DF44400003DE79 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1D4B3315DF44400003DE79 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F1D4B1215DF3DEC0003DE79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5F1D4B1315DF3DEC0003DE79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F1D4B1515DF3DEC0003DE79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/MTBlockAlertView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTBlockAlertView/MTBlockAlertView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5F1D4B1615DF3DEC0003DE79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/MTBlockAlertView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTBlockAlertView/MTBlockAlertView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5F1D4B3915DF44400003DE79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTBlockAlertViewDemo/MTBlockAlertViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "MTBlockAlertViewDemo/MTBlockAlertViewDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5F1D4B3A15DF44400003DE79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTBlockAlertViewDemo/MTBlockAlertViewDemo-Prefix.pch";
+				INFOPLIST_FILE = "MTBlockAlertViewDemo/MTBlockAlertViewDemo-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F1D4B0015DF3DEC0003DE79 /* Build configuration list for PBXProject "MTBlockAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1D4B1215DF3DEC0003DE79 /* Debug */,
+				5F1D4B1315DF3DEC0003DE79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1D4B1415DF3DEC0003DE79 /* Build configuration list for PBXNativeTarget "MTBlockAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1D4B1515DF3DEC0003DE79 /* Debug */,
+				5F1D4B1615DF3DEC0003DE79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5F1D4B3815DF44400003DE79 /* Build configuration list for PBXNativeTarget "MTBlockAlertViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1D4B3915DF44400003DE79 /* Debug */,
+				5F1D4B3A15DF44400003DE79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F1D4AFD15DF3DEC0003DE79 /* Project object */;
+}
