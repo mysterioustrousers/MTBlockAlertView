@@ -16,23 +16,21 @@
 @implementation ViewController
 
 - (IBAction)initVersionTapped:(id)sender {
-    MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:@"Init Version"
-                                                                  message:@"You tapped the init version"
-                                                                 delegate:nil
-                                                        cancelButtonTitle:@"Cancel"
-                                                        otherButtonTitles:@"OK", nil];
-    
-    alertView.delegate = alertView; // This is currently required since you can't override
-                                    // the initWithTitle initializer properly due to the
-                                    // otherButtonTitles variable argument list.
-    
-    [alertView setDidDismissWithButtonIndexBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-        if (buttonIndex == 0) {
+  
+    void (^completionHandler)(UIAlertView *, NSInteger) = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == alertView.cancelButtonIndex) {
             [MTBlockAlertView showWithTitle:@"Cancel" message:@"You tapped Cancel"];
         } else {
             [MTBlockAlertView showWithTitle:@"OK" message:@"You tapped OK"];
         }
-    }];
+    };
+
+    MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:@"Init Version"
+                                                                  message:@"You tapped the init version"
+                                                        completionHanlder:completionHandler
+                                                        cancelButtonTitle:@"Cancel"
+                                                        otherButtonTitles:@"OK", nil];
+    
     
     [alertView show];
 }
