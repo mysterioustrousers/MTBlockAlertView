@@ -33,6 +33,37 @@
     return self;
 }
 
+- (id)initWithTitle:(NSString *)title
+            message:(NSString *)message
+  completionHanlder:(void(^)(UIAlertView *alertView, NSInteger buttonIndex))theHandler
+  cancelButtonTitle:(NSString *)cancelButtonTitle
+  otherButtonTitles:(NSString *)otherButtonTitles, ... {
+  self = [super initWithTitle:title
+                      message:message
+                     delegate:self
+            cancelButtonTitle:cancelButtonTitle
+            otherButtonTitles: nil];
+  if (self) {
+    if (otherButtonTitles) {
+      va_list args;
+      va_start(args, otherButtonTitles);
+      [self addButtonWithTitle:otherButtonTitles];
+      id object = nil;
+      do {
+        object = va_arg(args, id);
+        if (object) {
+          [self addButtonWithTitle:object];
+        }
+      } while (object);
+      va_end(args);
+    }
+    
+    [self setDidDismissWithButtonIndexBlock:theHandler];
+  }
+  
+  return self;
+}
+
 #pragma mark UIAlertViewDelegate methods (optional)
 
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -70,19 +101,11 @@
 
     MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:title
                                                                   message:message
-                                                                 delegate:nil
+                                                        completionHanlder:completionBlock
                                                         cancelButtonTitle:cancelButtonTitle
                                                         otherButtonTitles:otherButtonTitle, nil];
     
-    alertView.delegate = alertView;
-    
     alertView.alertViewStyle = alertViewStyle;
-    
-    [alertView setDidDismissWithButtonIndexBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-        if (completionBlock) {
-            completionBlock(alertView, buttonIndex);
-        }
-    }];
     
     [alertView show];
 }
@@ -91,18 +114,17 @@
                message:(NSString *)message
        completionBlock:(void (^)(UIAlertView *alertView))completionBlock {
 
-    MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:title
-                                                                  message:message
-                                                                 delegate:nil
-                                                        cancelButtonTitle:@"OK"
-                                                        otherButtonTitles:nil];
-    alertView.delegate = alertView;
-    
-    [alertView setDidDismissWithButtonIndexBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+    void (^didDismissHandler)(UIAlertView *, NSInteger) = ^(UIAlertView *alertView, NSInteger index) {
         if (completionBlock) {
             completionBlock(alertView);
         }
-    }];
+    };
+    MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:title
+                                                                  message:message
+                                                        completionHanlder:didDismissHandler
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles:nil];
+    alertView.delegate = alertView;
     
     [alertView show];
 }
@@ -112,7 +134,7 @@
 
     MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:title
                                                                   message:message
-                                                                 delegate:nil
+                                                        completionHanlder:NULL
                                                         cancelButtonTitle:@"OK" otherButtonTitles:nil];
     alertView.delegate = alertView;
     
