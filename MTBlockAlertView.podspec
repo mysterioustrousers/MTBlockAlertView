@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MTBlockAlertView"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "An iOS Alert View that uses block-based delegation instead of protocols."
   s.homepage     = "https://github.com/mysterioustrousers/MTBlockAlertView"
   s.license      = 'MIT'
