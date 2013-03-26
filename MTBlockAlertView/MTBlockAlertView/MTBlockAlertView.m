@@ -89,6 +89,13 @@
         _cancelBlock(alertView);
     }
 }
+- (BOOL) alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView {
+    if (_shouldEnableFirstOtherButtonBlock) {
+        return _shouldEnableFirstOtherButtonBlock(alertView);
+    }
+    
+    return YES;
+}
 
 #pragma mark Convenience Methods
 

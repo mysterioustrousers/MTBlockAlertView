@@ -16,6 +16,7 @@
 @property (nonatomic, strong) void (^didDismissWithButtonIndexBlock)(UIAlertView *alertView, NSInteger buttonIndex);
 @property (nonatomic, strong) void (^willDismissWithButtonIndexBlock)(UIAlertView *alertView, NSInteger buttonIndex);
 @property (nonatomic, strong) void (^cancelBlock)(UIAlertView *alertView);
+@property (nonatomic, strong) BOOL (^shouldEnableFirstOtherButtonBlock)(UIAlertView *alertView);
 
 #pragma mark Convenience Methods
 
