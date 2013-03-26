@@ -38,30 +38,29 @@
   completionHanlder:(void(^)(UIAlertView *alertView, NSInteger buttonIndex))theHandler
   cancelButtonTitle:(NSString *)cancelButtonTitle
   otherButtonTitles:(NSString *)otherButtonTitles, ... {
-  self = [super initWithTitle:title
-                      message:message
-                     delegate:self
-            cancelButtonTitle:cancelButtonTitle
-            otherButtonTitles: nil];
-  if (self) {
-    if (otherButtonTitles) {
-      va_list args;
-      va_start(args, otherButtonTitles);
-      [self addButtonWithTitle:otherButtonTitles];
-      id object = nil;
-      do {
-        object = va_arg(args, id);
-        if (object) {
-          [self addButtonWithTitle:object];
+    self = [super initWithTitle:title
+                        message:message
+                       delegate:self
+              cancelButtonTitle:cancelButtonTitle
+              otherButtonTitles:otherButtonTitles, nil];
+    if (self) {
+        if (otherButtonTitles) {
+            va_list args;
+            va_start(args, otherButtonTitles);
+            id object = nil;
+            do {
+                object = va_arg(args, id);
+                if (object) {
+                    [self addButtonWithTitle:object];
+                }
+            } while (object);
+            va_end(args);
         }
-      } while (object);
-      va_end(args);
+        
+        [self setDidDismissWithButtonIndexBlock:theHandler];
     }
     
-    [self setDidDismissWithButtonIndexBlock:theHandler];
-  }
-  
-  return self;
+    return self;
 }
 
 #pragma mark UIAlertViewDelegate methods (optional)
@@ -89,6 +88,13 @@
         _cancelBlock(alertView);
     }
 }
+- (BOOL) alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView {
+    if (_shouldEnableFirstOtherButtonBlock) {
+        return _shouldEnableFirstOtherButtonBlock(alertView);
+    }
+    
+    return YES;
+}
 
 #pragma mark Convenience Methods
 
@@ -98,7 +104,7 @@
       otherButtonTitle:(NSString *)otherButtonTitle
         alertViewStyle:(UIAlertViewStyle)alertViewStyle
        completionBlock:(void (^)(UIAlertView *alertView, NSInteger buttonIndex))completionBlock {
-
+    
     MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:title
                                                                   message:message
                                                         completionHanlder:completionBlock
@@ -113,7 +119,7 @@
 + (void) showWithTitle:(NSString *)title
                message:(NSString *)message
        completionBlock:(void (^)(UIAlertView *alertView))completionBlock {
-
+    
     void (^didDismissHandler)(UIAlertView *, NSInteger) = ^(UIAlertView *alertView, NSInteger index) {
         if (completionBlock) {
             completionBlock(alertView);
@@ -131,7 +137,7 @@
 
 + (void) showWithTitle:(NSString *)title
                message:(NSString *)message {
-
+    
     MTBlockAlertView *alertView = [[MTBlockAlertView alloc] initWithTitle:title
                                                                   message:message
                                                         completionHanlder:NULL
